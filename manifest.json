@@ -1,0 +1,17 @@
+{
+  "name": "مفروشات إسماعيل | Ismail Furniture",
+  "short_name": "Ismail Furniture",
+  "description": "أثاث فاخر وتنجيد احترافي بجودة عالمية",
+  "start_url": "/ismail-furniture-website/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c9a961",
+  "icons": [
+    {
+      "src": "/ismail-furniture-website/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

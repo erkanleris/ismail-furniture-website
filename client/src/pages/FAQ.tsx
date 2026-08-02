@@ -8,7 +8,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   React.useEffect(() => {
-    fetch('/data.json')
+    fetch(import.meta.env.BASE_URL + 'data.json')
       .then(res => res.json())
       .then(json => setData(json));
   }, []);

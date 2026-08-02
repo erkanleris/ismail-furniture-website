@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [react()],
+  root: path.resolve(__dirname, 'client'),
   base: '/ismail-furniture-website/',
   resolve: {
     alias: {
@@ -14,7 +15,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist/public',
+    outDir: path.resolve(__dirname, 'dist/public'),
     emptyOutDir: true,
   },
   server: {

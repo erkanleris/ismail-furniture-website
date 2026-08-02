@@ -27,7 +27,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Load data from JSON
-    fetch('/data.json')
+    fetch(import.meta.env.BASE_URL + 'data.json')
       .then(res => res.json())
       .then(json => setData(json))
       .catch(err => console.error('Failed to load data:', err));

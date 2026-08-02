@@ -12,7 +12,7 @@ export default function Home() {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    fetch('/data.json')
+    fetch(import.meta.env.BASE_URL + 'data.json')
       .then(res => res.json())
       .then(json => setData(json))
       .catch(err => console.error('Failed to load data:', err));
@@ -273,9 +273,9 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">{language === 'ar' ? 'المعلومات' : 'Bilgiler'}</h4>
               <ul className="text-sm opacity-80 space-y-2">
-                <li><a href="/privacy" className="hover:text-accent transition-colors">{language === 'ar' ? 'سياسة الخصوصية' : 'Gizlilik Politikası'}</a></li>
-                <li><a href="/terms" className="hover:text-accent transition-colors">{language === 'ar' ? 'شروط الاستخدام' : 'Kullanım Şartları'}</a></li>
-                <li><a href="/faq" className="hover:text-accent transition-colors">{language === 'ar' ? 'الأسئلة الشائعة' : 'Sıkça Sorulan Sorular'}</a></li>
+                <li><a href="#/privacy" className="hover:text-accent transition-colors">{language === 'ar' ? 'سياسة الخصوصية' : 'Gizlilik Politikası'}</a></li>
+                <li><a href="#/terms" className="hover:text-accent transition-colors">{language === 'ar' ? 'شروط الاستخدام' : 'Kullanım Şartları'}</a></li>
+                <li><a href="#/faq" className="hover:text-accent transition-colors">{language === 'ar' ? 'الأسئلة الشائعة' : 'Sıkça Sorulan Sorular'}</a></li>
               </ul>
             </div>
             <div>

@@ -6,7 +6,7 @@ export default function About() {
   const [data, setData] = React.useState<any>(null);
 
   React.useEffect(() => {
-    fetch('/data.json')
+    fetch(import.meta.env.BASE_URL + 'data.json')
       .then(res => res.json())
       .then(json => setData(json))
       .catch(err => console.error('Failed to load data:', err));

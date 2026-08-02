@@ -6,7 +6,7 @@ export default function Products() {
   const [data, setData] = useState<any>(null);
 
   React.useEffect(() => {
-    fetch('/data.json')
+    fetch(import.meta.env.BASE_URL + 'data.json')
       .then(res => res.json())
       .then(json => setData(json));
   }, []);
